@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url(../img/bg.jpg);
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+}
+
+.header {
+  min-height: 100vh;
+}
+
+.header__logo-box {
+  display: inline-block;
+  margin: 3rem;
+}
+
+.header__logo-img {
+  display: block;
+  width: 7rem;
+  height: auto;
+  margin: 0 auto 0.5rem auto;
+}
+
+.header__logo-text {
+  font-size: 1.6rem;
+  color: #002945;
+}
+
+.header__content-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+}
+
+.header__text-box {
+  padding: 5rem;
+}
+
+.header__text {
+  margin-bottom: 3rem;
+}
+
+.header__heading {
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: 200;
+  line-height: initial;
+}
+
+.header__3d-logo-box {
+  padding: 5rem;
+}
+
+.header__3d-logo {
+  display: block;
+  width: 35rem;
+  height: auto;
+  margin: 0 auto;
+}
