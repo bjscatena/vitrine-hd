@@ -1,0 +1,14 @@
+.card-plano {
+  display: inline-block;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  padding: 3rem;
+
+  &__header {
+    font-size: 2rem;
+  }
+
+  &__preco {
+    font-size: 4rem;
+  }
+}

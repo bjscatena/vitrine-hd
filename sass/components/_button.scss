@@ -6,15 +6,37 @@
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  padding: 1.3rem 4rem;
+  padding: $btn-vert-padding $btn-horiz-padding;
+  font-size: $btn-font-size;
   border-radius: 5rem;
   border: 1px solid transparent;
   background-color: transparent;
-  font-size: 1.7rem;
-  text-transform: uppercase;
-}
 
-.btn--primary {
-  background-color: #002945;
-  color: white;
+  &--primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background-color: lighten($color-primary, 5%);
+    }
+  }
+
+  &--accent {
+    background-color: $color-accent;
+    color: $color-white;
+
+    &:hover {
+      background-color: lighten($color-accent, 5%);
+    }
+  }
+
+  &--small {
+    padding: ($btn-vert-padding * 0.8) ($btn-horiz-padding * 0.7);
+    font-size: $btn-font-size * 0.8;
+  }
+
+  &--large {
+    padding: ($btn-vert-padding * 1.2) ($btn-horiz-padding * 1.2);
+    font-size: $btn-font-size * 1.2;
+  }
 }

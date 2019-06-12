@@ -1,17 +1,8 @@
-/**
- * Set up a decent box model on the root element
- */
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   box-sizing: border-box; }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
 *,
 *::after,
 *::before {
@@ -31,133 +22,113 @@ p {
  * Basic typography style for copy text
  */
 body {
-  font-family: "Roboto", sans-serif;
-  color: #222222;
+  font-family: 'Roboto', sans-serif;
+  color: #2b2b2b;
   line-height: 1.7; }
 
-/**
- * Clear inner floats
- */
-.clearfix::after {
-  clear: both;
-  content: '';
-  display: table; }
+.section-title {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem; }
 
-/**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
- */
-.container {
-  max-width: 1180px;
-  /* 1 */
-  margin-left: auto;
-  /* 2 */
-  margin-right: auto;
-  /* 2 */
-  padding-left: 20px;
-  /* 3 */
-  padding-right: 20px;
-  /* 3 */
-  width: 100%;
-  /* 1 */ }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
 
-/**
- * Hide text while making it readable for screen readers
- * 1. Needed in WebKit-based browsers because of an implementation bug;
- *    See: https://code.google.com/p/chromium/issues/detail?id=457146
- */
-.hide-text {
-  overflow: hidden;
-  padding: 0;
-  /* 1 */
-  text-indent: 101%;
-  white-space: nowrap; }
-
-/**
- * Hide element while making it readable for screen readers
- * Shamelessly borrowed from HTML5Boilerplate:
- * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
- */
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
+.fadeInUp {
+  animation-name: fadeInUp; }
 
 .header {
-  background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.9)), url(../img/bg.jpg);
+  background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.8)), url(../../img/bg.jpg);
   background-size: cover;
   background-position: left;
-  background-attachment: fixed; }
-
-.header {
+  background-attachment: fixed;
   min-height: 100vh; }
-
-.header__logo-box {
-  display: inline-block;
-  margin: 3rem; }
-
-.header__logo-img {
-  display: block;
-  width: 7rem;
-  height: auto;
-  margin: 0 auto 0.5rem auto; }
-
-.header__logo-text {
-  font-size: 1.6rem;
-  color: #002945; }
-
-.header__content-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); }
-
-.header__text-box {
-  padding: 5rem; }
-
-.header__text {
-  margin-bottom: 3rem; }
-
-.header__heading {
-  text-transform: uppercase;
-  font-size: 6rem;
-  font-weight: 200;
-  line-height: initial; }
-
-.header__3d-logo-box {
-  padding: 5rem; }
-
-.header__3d-logo {
-  display: block;
-  width: 35rem;
-  height: auto;
-  margin: 0 auto; }
+  .header__logo-box {
+    display: inline-block;
+    margin: 3rem; }
+  .header__logo-img {
+    display: block;
+    width: 7rem;
+    height: auto;
+    margin: 0 auto 0.5rem auto; }
+  .header__logo-text {
+    font-size: 1.6rem;
+    color: #002945; }
+  .header__content-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
+    margin-top: 3rem;
+    padding: 0 5%; }
+  .header__text-box {
+    align-self: center; }
+  .header__text {
+    margin-bottom: 3rem; }
+  .header__heading {
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 200;
+    line-height: initial; }
+  .header__3d-logo {
+    display: block;
+    width: 40rem;
+    height: auto;
+    margin: 0 auto;
+    animation-name: fadeInUp;
+    animation-duration: 2s; }
 
 .btn {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  padding: 1.3rem 4rem;
+  padding: 1.3rem 5rem;
+  font-size: 1.7rem;
   border-radius: 5rem;
   border: 1px solid transparent;
-  background-color: transparent;
-  font-size: 1.7rem;
-  text-transform: uppercase; }
-
-.btn--primary {
-  background-color: #002945;
-  color: white; }
+  background-color: transparent; }
+  .btn--primary {
+    background-color: #002945;
+    color: #fff; }
+    .btn--primary:hover {
+      background-color: #00385f; }
+  .btn--accent {
+    background-color: #6c1d00;
+    color: #fff; }
+    .btn--accent:hover {
+      background-color: #862400; }
+  .btn--small {
+    padding: 1.04rem 3.5rem;
+    font-size: 1.36rem; }
+  .btn--large {
+    padding: 1.56rem 6rem;
+    font-size: 2.04rem; }
 
 .nav {
   position: absolute;
   right: 2.5rem;
   top: 2.5rem; }
+  .nav__link {
+    font-size: 1.6rem;
+    margin: 0 1.7rem; }
+    .nav__link:hover {
+      padding-bottom: 0.5rem;
+      color: #919191; }
+  .nav__assinar {
+    margin: 0 1.7rem; }
 
-.nav__link {
-  font-size: 1.6rem;
-  margin: 0 1.7rem; }
+.card-plano {
+  display: inline-block;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  padding: 3rem; }
+  .card-plano__header {
+    font-size: 2rem; }
+  .card-plano__preco {
+    font-size: 4rem; }

@@ -2,9 +2,18 @@
   position: absolute;
   right: 2.5rem;
   top: 2.5rem;
-}
 
-.nav__link {
-  font-size: 1.6rem;
-  margin: 0 1.7rem;
+  &__link {
+    font-size: 1.6rem;
+    margin: 0 1.7rem;
+
+    &:hover {
+      padding-bottom: 0.5rem;
+      color: lighten($text-color, 40%);
+    }
+  }
+
+  &__assinar {
+    margin: 0 1.7rem;
+  }
 }

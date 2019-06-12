@@ -6,62 +6,60 @@
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.9)
+      rgba(255, 255, 255, 0.8)
     ),
-    url(../img/bg.jpg);
+    url(../../img/bg.jpg);
   background-size: cover;
   background-position: left;
   background-attachment: fixed;
-}
 
-.header {
   min-height: 100vh;
-}
 
-.header__logo-box {
-  display: inline-block;
-  margin: 3rem;
-}
+  &__logo-box {
+    display: inline-block;
+    margin: 3rem;
+  }
 
-.header__logo-img {
-  display: block;
-  width: 7rem;
-  height: auto;
-  margin: 0 auto 0.5rem auto;
-}
+  &__logo-img {
+    display: block;
+    width: 7rem;
+    height: auto;
+    margin: 0 auto 0.5rem auto;
+  }
 
-.header__logo-text {
-  font-size: 1.6rem;
-  color: #002945;
-}
+  &__logo-text {
+    font-size: 1.6rem;
+    color: $color-primary;
+  }
 
-.header__content-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-}
+  &__content-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
+    margin-top: 3rem;
+    padding: 0 5%;
+  }
 
-.header__text-box {
-  padding: 5rem;
-}
+  &__text-box {
+    align-self: center;
+  }
 
-.header__text {
-  margin-bottom: 3rem;
-}
+  &__text {
+    margin-bottom: 3rem;
+  }
 
-.header__heading {
-  text-transform: uppercase;
-  font-size: 6rem;
-  font-weight: 200;
-  line-height: initial;
-}
+  &__heading {
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 200;
+    line-height: initial;
+  }
 
-.header__3d-logo-box {
-  padding: 5rem;
-}
-
-.header__3d-logo {
-  display: block;
-  width: 35rem;
-  height: auto;
-  margin: 0 auto;
+  &__3d-logo {
+    display: block;
+    width: 40rem;
+    height: auto;
+    margin: 0 auto;
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+  }
 }
