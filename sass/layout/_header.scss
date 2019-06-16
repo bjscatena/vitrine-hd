@@ -5,15 +5,23 @@
 .header {
   background-image: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.8)
+      rgba($color-white, 1),
+      rgba($color-white, 0.4)
     ),
-    url(../../img/bg.jpg);
+    url(../../images/bg.jpg);
   background-size: cover;
   background-position: left;
   background-attachment: fixed;
 
   min-height: 100vh;
+
+  &__top {
+    height: $header-top-height;
+  }
+
+  &__content {
+    padding: 2% 0;
+  }
 
   &__logo-box {
     display: inline-block;
@@ -32,31 +40,10 @@
     color: $color-primary;
   }
 
-  &__content-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
-    margin-top: 3rem;
-    padding: 0 5%;
-  }
-
-  &__text-box {
-    align-self: center;
-  }
-
-  &__text {
-    margin-bottom: 3rem;
-  }
-
-  &__heading {
-    text-transform: uppercase;
-    font-size: 6rem;
-    font-weight: 200;
-    line-height: initial;
-  }
-
   &__3d-logo {
     display: block;
-    width: 40rem;
+    width: 75%;
+    max-width: 40rem;
     height: auto;
     margin: 0 auto;
     animation-name: fadeInUp;

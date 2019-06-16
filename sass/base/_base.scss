@@ -25,3 +25,27 @@ a {
 p {
   font-size: 1.6rem;
 }
+
+@media (max-width: $breakpoint-small) {
+  html {
+    font-size: 53%;
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  html {
+    font-size: 57%;
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  html {
+    font-size: 67%;
+  }
+}
+
+@media (min-width: $breakpoint-extra-large) {
+  html {
+    font-size: 71%;
+  }
+}

@@ -3,16 +3,54 @@
  */
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: $text-color;
   line-height: 1.7;
 }
 
-.section-title {
-  font-size: 3rem;
-  font-weight: 300;
+[class^="heading-"] {
+  color: $color-primary;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  font-weight: 300;
+  line-height: initial;
+}
+
+.heading-primary {
+  font-size: 5rem;
+}
+
+@media (max-width: $breakpoint-small) {
+  .heading-primary {
+    font-size: 4.5rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 4rem;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 30%;
+    background-color: $color-primary;
+    height: 2px;
+    margin: 2rem auto 0 auto;
+  }
+
+  &--light {
+    color: $color-white;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .heading-secondary {
+    font-size: 3.5rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
 }

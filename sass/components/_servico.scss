@@ -1,0 +1,37 @@
+.servico {
+  background-color: rgba($color-white, 0.8);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+  &__icone {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      $color-primary,
+      $color-primary-light
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}
+
+@media (min-width: $breakpoint-small) {
+  .servico {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  .servico {
+    margin-bottom: 4rem;
+  }
+}

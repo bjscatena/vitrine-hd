@@ -1,3 +1,28 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+.planos {
+  position: relative;
+  padding: 10rem 2rem 20rem 2rem;
+  background-color: $color-light-grey;
+}
+
+.section-servicos {
+  margin-top: -7%;
+  padding: 20rem 0;
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary, 0.8)
+    ),
+    url(../images/woman_happy.jpg);
+  background-size: cover;
+
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
