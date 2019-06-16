@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/icon-font.css" />
 
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/aos.css" />
   </head>
   <body>
     <header class="header">
@@ -47,7 +48,11 @@
 
       <div class="container-fluid header__content">
         <div class="row justify-content-center">
-          <div class="col-xl-5 col-lg-5 col-sm-10 col-10 mb-5">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            class="col-xl-5 col-lg-5 col-sm-10 col-10 mb-5"
+          >
             <h1 class="heading-primary">Seu site agora é realidade</h1>
             <p>
               O site que você sonhou para a sua empresa pagando apenas uma
@@ -64,7 +69,11 @@
           </div>
 
           <div class="col-xl-5 col-lg-5 col-sm-10 col-10">
-            <figure class="header__3d-logo-box">
+            <figure
+              class="header__3d-logo-box"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
               <img class="header__3d-logo" src="images/logo_3d.png" alt="" />
             </figure>
           </div>
@@ -79,8 +88,13 @@
         </h2>
 
         <div class="row">
+          <!-- Card 1 -->
           <div class="col-lg-4 col-sm-12">
-            <div class="card-plano">
+            <div
+              class="card-plano"
+              data-aos="flip-left"
+              data-aos-duration="2000"
+            >
               <div class="card-plano__header card-plano__header--basic">
                 <h3 class="card-plano__titulo">Basic</h3>
               </div>
@@ -102,8 +116,13 @@
             </div>
           </div>
 
+          <!-- Card 2 -->
           <div class="col-lg-4 col-sm-12">
-            <div class="card-plano">
+            <div
+              class="card-plano"
+              data-aos="flip-left"
+              data-aos-duration="2000"
+            >
               <div class="card-plano__header card-plano__header--pro">
                 <h3 class="card-plano__titulo">Pro</h3>
               </div>
@@ -127,8 +146,13 @@
             </div>
           </div>
 
+          <!-- Card 3 -->
           <div class="col-lg-4 col-sm-12">
-            <div class="card-plano">
+            <div
+              class="card-plano"
+              data-aos="flip-left"
+              data-aos-duration="2000"
+            >
               <div class="card-plano__header card-plano__header--plus">
                 <h3 class="card-plano__titulo">Plus</h3>
               </div>
@@ -155,7 +179,11 @@
         <div class="row justify-content-center">
           <!-- Serviço 1 -->
           <div class="col-lg-4 col-md-8 col-sm-10">
-            <div class="servico">
+            <div
+              class="servico"
+              data-aos="fade-down-right"
+              data-aos-duration="1500"
+            >
               <i class="servico__icone icon-basic-todo-txt"></i>
 
               <h3 class="heading-tertiary u-margin-bottom-small ">
@@ -171,7 +199,7 @@
 
           <!-- Serviço 2 -->
           <div class="col-lg-4 col-md-8 col-sm-10">
-            <div class="servico">
+            <div class="servico" data-aos="fade-up" data-aos-duration="1500">
               <i class="servico__icone icon-basic-gear"></i>
 
               <h3 class="heading-tertiary u-margin-bottom-small ">
@@ -187,7 +215,11 @@
 
           <!-- Serviço 3 -->
           <div class="col-lg-4 col-md-8 col-sm-10">
-            <div class="servico">
+            <div
+              class="servico"
+              data-aos="fade-down-left"
+              data-aos-duration="1500"
+            >
               <i class="servico__icone icon-basic-pencil-ruler"></i>
 
               <h3 class="heading-tertiary u-margin-bottom-small ">
@@ -203,5 +235,11 @@
         </div>
       </div>
     </section>
+
+    <script src="js/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

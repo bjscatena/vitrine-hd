@@ -94,59 +94,6 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 50%, 0); }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-.fadeInUp {
-  animation-name: fadeInUp; }
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0); }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-.fadeInLeft {
-  animation-name: fadeInLeft; }
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0); }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-.fadeInRight {
-  animation-name: fadeInRight; }
-
-@keyframes flipInY {
-  from {
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    animation-timing-function: ease-in;
-    opacity: 0; }
-  40% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    animation-timing-function: ease-in; }
-  60% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    opacity: 1; }
-  80% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg); }
-  to {
-    transform: perspective(400px); } }
-
-.flipInY {
-  backface-visibility: visible !important;
-  animation-name: flipInY; }
-
 .header {
   background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.4)), url(../../images/bg.jpg);
   background-size: cover;
@@ -173,9 +120,7 @@ body {
     width: 75%;
     max-width: 40rem;
     height: auto;
-    margin: 0 auto;
-    animation-name: fadeInUp;
-    animation-duration: 2s; }
+    margin: 0 auto; }
 
 .nav {
   position: absolute;
@@ -236,9 +181,7 @@ body {
   overflow: hidden;
   max-width: 45rem;
   margin: 3rem auto;
-  transition: all 0.2s;
-  animation-name: flipInY;
-  animation-duration: 2s; }
+  transition: all 0.2s; }
   .card-plano [class*="--basic"] {
     background-color: #167cc3; }
   .card-plano [class*="--pro"] {
