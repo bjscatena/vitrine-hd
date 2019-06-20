@@ -3,16 +3,20 @@
  */
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: $text-color;
   line-height: 1.7;
 }
 
-[class^="heading-"] {
+.paragraph {
+  font-size: 1.6rem;
+}
+
+[class^='heading-'] {
   color: $color-primary;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 600;
   line-height: initial;
 }
 
@@ -30,7 +34,7 @@ body {
   font-size: 4rem;
 
   &::after {
-    content: "";
+    content: '';
     display: block;
     width: 30%;
     background-color: $color-primary;

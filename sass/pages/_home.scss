@@ -26,3 +26,14 @@
     transform: skewY(7deg);
   }
 }
+
+.section-depoimentos {
+  position: relative;
+  padding: 15rem;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .section-depoimentos {
+    padding: 15rem 5rem;
+  }
+}
