@@ -31,6 +31,7 @@ body {
 }
 
 .heading-secondary {
+  color: $color-secondary;
   font-size: 4rem;
 
   &::after {

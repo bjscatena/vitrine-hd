@@ -1,0 +1,20 @@
+.sobre-nos {
+  padding: 15rem;
+
+  &__titulo {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: center;
+  }
+
+  &__texto {
+    padding-left: 1rem;
+    text-align: left;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+}

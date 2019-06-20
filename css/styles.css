@@ -61,6 +61,7 @@ body {
     font-size: 4.5rem; } }
 
 .heading-secondary {
+  color: #167cc3;
   font-size: 4rem; }
   .heading-secondary::after {
     content: '';
@@ -124,6 +125,48 @@ body {
     max-width: 40rem;
     height: auto;
     margin: 0 auto; }
+
+footer {
+  background-color: #333;
+  padding: 3rem;
+  font-size: 1.4rem;
+  text-align: right; }
+
+.footer-nav {
+  list-style: none;
+  float: left; }
+
+.social-links {
+  list-style: none;
+  float: right; }
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px; }
+
+.footer-nav li:last-child,
+.social-links:last-child {
+  margin-right: 0; }
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  color: #a1a1a1;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #d4d3d3; }
+
+footer p {
+  color: #a1a1a1;
+  text-align: right;
+  font-size: 1.4rem;
+  margin-top: 3rem; }
 
 .nav {
   position: absolute;
@@ -287,14 +330,56 @@ body {
     width: 100%;
     object-fit: cover; }
 
-.planos {
-  position: relative;
-  padding: 10rem 2rem 20rem 2rem;
-  background-color: #f7f7f7; }
+.sobre-nos {
+  padding: 15rem; }
+  .sobre-nos__titulo {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: center; }
+  .sobre-nos__texto {
+    padding-left: 1rem;
+    text-align: left; }
+  .sobre-nos__image {
+    display: block;
+    width: 100%; }
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto; }
+
+input[type='text'],
+input[type='email'],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 1.4rem; }
+
+textarea {
+  height: 100px; }
+
+.input[type='checkbox'] {
+  margin: 10px 5px 10px 0; }
+
+*:focus {
+  outline: none; }
+
+label {
+  font-size: 1.4rem; }
+
+.section-planos {
+  margin-top: -7%;
+  padding: 25rem 2rem 20rem 2rem;
+  background-color: #f7f7f7;
+  z-index: 0; }
 
 .section-servicos {
   margin-top: -7%;
   padding: 20rem 0;
+  z-index: 5;
   background-image: linear-gradient(to right bottom, rgba(0, 74, 127, 0.8), rgba(0, 41, 69, 0.8)), url(../images/woman_happy.jpg);
   background-size: cover;
   transform: skewY(-7deg); }
@@ -308,3 +393,9 @@ body {
 @media (max-width: 768px) {
   .section-depoimentos {
     padding: 15rem 5rem; } }
+
+.section-sobre-nos {
+  padding: 0 0 20rem 0; }
+
+.section-contato {
+  padding: 15rem; }
