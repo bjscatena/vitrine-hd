@@ -2,52 +2,94 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 
-footer {
+.footer {
   background-color: #333;
-  padding: 3rem;
-  font-size: 1.4rem;
+  padding: 10rem 0 4rem 0;
   text-align: right;
-}
 
-.footer-nav {
-  list-style: none;
-  float: left;
-}
+  &__logo-box {
+    text-align: left;
+  }
 
-.social-links {
-  list-style: none;
-  float: right;
-}
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
 
-.footer-nav li,
-.social-links li {
-  display: inline-block;
-  margin-right: 20px;
-}
+  &__nav {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 300;
 
-.footer-nav li:last-child,
-.social-links:last-child {
-  margin-right: 0;
-}
+    border-top: 1px solid $color-white;
+    padding-top: 1rem;
 
-.footer-nav li a:link,
-.footer-nav li a:visited,
-.social-links li a:link,
-.social-links li a:visited {
-  text-decoration: none;
-  color: rgb(161, 161, 161);
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
+    li {
+      list-style: none;
+      display: inline-block;
+    }
 
-.footer-nav li a:hover,
-.footer-nav li a:active {
-  color: rgb(212, 211, 211);
-}
+    li:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
 
-footer p {
-  color: rgb(161, 161, 161);
-  text-align: right;
-  font-size: 1.4rem;
-  margin-top: 3rem;
+  &__link {
+    padding: 1rem 2rem;
+    transition: all 0.3s;
+
+    &:link,
+    &:visited {
+      color: $color-light-grey;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-tertiary;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+      transform: rotateX(10deg) scale(1.03);
+    }
+  }
+
+  &__social-links {
+    color: $color-white;
+    text-align: right;
+
+    li {
+      display: inline-block;
+      list-style: none;
+    }
+
+    li:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__social-link {
+    display: inline-block;
+    text-align: center;
+    width: 5rem;
+    max-height: 5rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &--facebook {
+      background-color: #3b5998;
+    }
+
+    &--twitter {
+      background-color: #00aced;
+    }
+  }
+
+  &__texto {
+    color: $color-light-grey;
+    text-align: center;
+    font-size: 1.3rem;
+  }
 }
