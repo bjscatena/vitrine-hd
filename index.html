@@ -347,81 +347,52 @@
 
     <section class="section-contato">
       <div class="container">
-        <h2 class="heading-secondary u-text-center u-margin-bottom-large">
+        <h2 class="heading-secondary u-text-center u-margin-bottom-medium">
           estamos te esperando
         </h2>
 
         <div class="row">
-          <form action="#" method="POST" class="contact-form">
-            <div class="row u-margin-bottom-small">
-              <div class="col-lg-4">
-                <label for="name">Nome</label>
-              </div>
-              <div class="col-lg-8">
+          <div class="col-lg-12">
+            <form autocomplete="off" action="#" method="POST" class="form ">
+              <div class="form__group">
                 <input
+                  class="form__input"
                   type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Seu nome"
+                  id="nome"
+                  placeholder="Nome"
                   required
                 />
+                <label class="form__label" for="nome">Nome</label>
               </div>
-            </div>
-            <div class="row u-margin-bottom-small">
-              <div class="col-lg-4">
-                <label for="email">Email</label>
-              </div>
-              <div class="col-lg-8">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Seu email"
-                  required
-                />
-              </div>
-            </div>
-            <div class="row u-margin-bottom-small">
-              <div class="col-lg-4">
-                <label for="find-us">Como nos encontrou?</label>
-              </div>
-              <div class="col-lg-8">
-                <select name="find-us" id="find-us">
-                  <option value="friends" selected>Amigo</option>
-                  <option value="search">Mecanismo de busca</option>
-                  <option value="ad">Redes sociais</option>
-                  <option value="other">Outros</option>
-                </select>
-              </div>
-            </div>
-            <div class="row u-margin-bottom-small">
-              <div class="col-lg-4">
-                <label for="news">Novidades</label>
-              </div>
-              <div class="col-lg-8">
-                <input type="checkbox" name="newslatter" id="news" checked />
-                Sim, por favor!
-              </div>
-            </div>
 
-            <div class="row u-margin-bottom-small">
-              <div class="col-lg-4">
-                <label for="message">Escreva um comentário</label>
+              <div class="form__group">
+                <input
+                  class="form__input"
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+                <label class="form__label" for="email">Email</label>
               </div>
-              <div class="col-lg-8">
+
+              <div class="form__group">
                 <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Sua mensagem"
-                ></textarea>
+                  class="form__input"
+                  id="mensagem"
+                  placeholder="Mensagem"
+                  rows="3"
+                >
+                </textarea>
+                <label class="form__label" for="mensagem">
+                  Mensagem
+                </label>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12 u-text-center">
-                <input type="submit" class="btn btn--primary" value="Enviar" />
+              <div class="u-text-center u-margin-top-medium">
+                <input type="submit" class="btn btn--primary " value="Enviar" />
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </section>
