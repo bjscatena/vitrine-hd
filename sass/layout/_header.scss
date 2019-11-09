@@ -17,15 +17,22 @@
 
   &__top {
     height: $header-top-height;
+    z-index: 999;
+    padding: 0;
   }
 
   &__content {
     padding: 2% 0;
+    text-align: center;
   }
 
   &__logo-box {
     display: inline-block;
     margin: 3rem;
+
+    &--no-text {
+      display: none;
+    }
   }
 
   &__logo-img {
@@ -46,5 +53,14 @@
     max-width: 40rem;
     height: auto;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .header {
+    &__content {
+      padding: 2% 0;
+      text-align: left;
+    }
   }
 }

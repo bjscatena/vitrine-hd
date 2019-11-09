@@ -30,12 +30,12 @@
 
 .section-depoimentos {
   position: relative;
-  padding: 15rem;
+  padding: 15rem 1.5rem;
 }
 
-@media (max-width: $breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
   .section-depoimentos {
-    padding: 15rem 5rem;
+    padding: 15rem 3rem;
   }
 }
 
@@ -44,5 +44,5 @@
 }
 
 .section-contato {
-  padding: 15rem;
+  padding: 15rem 1.5rem;
 }

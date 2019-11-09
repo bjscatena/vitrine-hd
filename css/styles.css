@@ -101,6 +101,9 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
 
+.u-margin-top-small {
+  margin-top: 2rem; }
+
 .u-margin-top-medium {
   margin-top: 5rem; }
 
@@ -111,12 +114,17 @@ body {
   background-attachment: fixed;
   min-height: 100vh; }
   .header__top {
-    height: 18rem; }
+    height: 18rem;
+    z-index: 999;
+    padding: 0; }
   .header__content {
-    padding: 2% 0; }
+    padding: 2% 0;
+    text-align: center; }
   .header__logo-box {
     display: inline-block;
     margin: 3rem; }
+    .header__logo-box--no-text {
+      display: none; }
   .header__logo-img {
     display: block;
     width: 7rem;
@@ -132,38 +140,53 @@ body {
     height: auto;
     margin: 0 auto; }
 
+@media (min-width: 768px) {
+  .header__content {
+    padding: 2% 0;
+    text-align: left; } }
+
 .footer {
   background-color: #333;
-  padding: 10rem 0 4rem 0;
-  text-align: right; }
+  padding: 5rem 1.5rem 1rem 1.5rem;
+  text-align: center; }
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 10rem 2rem;
+    max-width: 110rem;
+    margin: 0 auto; }
   .footer__logo-box {
-    text-align: left; }
+    text-align: center;
+    margin-bottom: 2rem;
+    grid-column: 1/2;
+    margin: auto 0; }
   .footer__logo {
-    width: 15rem;
+    max-width: 15rem;
+    width: 50%;
     height: auto; }
   .footer__nav {
     display: inline-block;
     font-size: 1.6rem;
     font-weight: 300;
     border-top: 1px solid #fff;
-    padding-top: 1rem; }
+    padding-top: 1rem;
+    text-align: right;
+    grid-column: 2/3; }
     .footer__nav li {
       list-style: none;
-      display: inline-block; }
-    .footer__nav li:not(:last-child) {
-      margin-right: 1rem; }
+      display: block; }
   .footer__link {
-    padding: 1rem 2rem;
+    padding: 1rem 0.5rem;
     transition: all 0.3s; }
     .footer__link:link, .footer__link:visited {
       color: #f7f7f7; }
     .footer__link:hover, .footer__link:active {
-      color: #51b6ff;
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-      transform: rotateX(10deg) scale(1.03); }
+      color: #b3b3b3; }
   .footer__social-links {
     color: #fff;
-    text-align: right; }
+    grid-column: 1/3;
+    text-align: center;
+    margin: auto 0; }
     .footer__social-links li {
       display: inline-block;
       list-style: none; }
@@ -183,15 +206,27 @@ body {
       background-color: #3b5998; }
     .footer__social-link--twitter {
       background-color: #00aced; }
+  .footer__texto-box {
+    grid-column: 1/3;
+    color: #f7f7f7; }
   .footer__texto {
-    color: #f7f7f7;
-    text-align: center;
     font-size: 1.3rem; }
+
+@media (min-width: 768px) {
+  .footer__nav {
+    text-align: center; }
+    .footer__nav li {
+      display: inline-block;
+      margin: 0 1rem; }
+  .footer__social-links {
+    text-align: right; } }
 
 .nav {
   position: absolute;
   right: 2.5rem;
-  top: 2.5rem; }
+  top: 2.5rem;
+  display: none;
+  z-index: 999; }
   .nav__link {
     font-size: 1.6rem;
     margin: 0 1.7rem; }
@@ -200,6 +235,10 @@ body {
       color: #919191; }
   .nav__assinar {
     margin: 0 1.7rem; }
+
+@media screen and (min-width: 901px) {
+  .nav {
+    display: block; } }
 
 .btn {
   display: inline-block;
@@ -315,6 +354,14 @@ body {
   .servico {
     margin-bottom: 4rem; } }
 
+.depoimentos {
+  max-width: 110rem;
+  margin: 0 auto; }
+  .depoimentos__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0; }
+
 .depoimento {
   position: relative;
   background-color: rgba(255, 255, 255, 0.6);
@@ -335,6 +382,12 @@ body {
     border-radius: 50%;
     border: 0.7rem solid #f7f7f7;
     box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.3); }
+
+@media (min-width: 992px) {
+  .depoimentos__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4%; } }
 
 .bg-video {
   position: absolute;
@@ -364,11 +417,21 @@ body {
     display: block;
     width: 100%; }
 
+@media screen and (max-width: 900px) {
+  .sobre-nos {
+    padding-left: 5rem;
+    padding-right: 5rem; } }
+
+@media screen and (max-width: 500px) {
+  .sobre-nos {
+    padding-left: 1rem;
+    padding-right: 1rem; } }
+
 .form__input {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-family: inherit;
   font-weight: 200;
-  padding: 1rem 1.5rem;
+  padding: 1rem 0rem;
   border: none;
   border-bottom: 1px solid #002945;
   display: block;
@@ -376,7 +439,8 @@ body {
   display: block; }
 
 .form {
-  width: 70%;
+  width: 100%;
+  max-width: 60rem;
   margin: 0 auto; }
   .form__group {
     margin-bottom: 2rem;
@@ -394,6 +458,68 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(4rem); }
+
+.hamburger-button {
+  display: none;
+  z-index: 998;
+  position: fixed;
+  top: 2.5rem;
+  right: 2.5rem;
+  text-decoration: none;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0.7rem 0.7rem 0rem 0.7rem;
+  color: #002945;
+  background-color: #fff;
+  border: 1px solid #004a7f;
+  border-radius: 3px;
+  transition: all 0.5s; }
+
+.overlay-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow-x: hidden;
+  transition: 0.5s; }
+  .overlay-menu__content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem; }
+  .overlay-menu__link {
+    padding: 0.8rem;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #999999;
+    display: block;
+    transition: 0.3s; }
+    .overlay-menu__link:hover, .overlay-menu__link:focus {
+      color: #fff; }
+  .overlay-menu__close {
+    position: absolute;
+    cursor: pointer;
+    top: 2rem;
+    right: 4.5rem;
+    font-size: 6rem;
+    color: #fff; }
+
+@media screen and (max-height: 450px) {
+  .overlay-menu__link {
+    font-size: 2rem; }
+  .overlay-menu__close {
+    font-size: 4rem;
+    top: 1.5rem;
+    right: 3.5rem; } }
+
+@media screen and (max-width: 900px) {
+  .hamburger-button {
+    display: block; } }
 
 .section-planos {
   margin-top: -7%;
@@ -413,14 +539,14 @@ body {
 
 .section-depoimentos {
   position: relative;
-  padding: 15rem; }
+  padding: 15rem 1.5rem; }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .section-depoimentos {
-    padding: 15rem 5rem; } }
+    padding: 15rem 3rem; } }
 
 .section-sobre-nos {
   padding: 0 0 20rem 0; }
 
 .section-contato {
-  padding: 15rem; }
+  padding: 15rem 1.5rem; }

@@ -2,6 +2,8 @@
   position: absolute;
   right: 2.5rem;
   top: 2.5rem;
+  display: none;
+  z-index: 999;
 
   &__link {
     font-size: 1.6rem;
@@ -15,5 +17,11 @@
 
   &__assinar {
     margin: 0 1.7rem;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .nav {
+    display: block;
   }
 }

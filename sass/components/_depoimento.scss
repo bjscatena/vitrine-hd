@@ -1,3 +1,14 @@
+.depoimentos {
+  max-width: 110rem;
+  margin: 0 auto;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+  }
+}
+
 .depoimento {
   position: relative;
   background-color: rgba($color-white, 0.6);
@@ -23,5 +34,15 @@
     border-radius: 50%;
     border: 0.7rem solid $color-light-grey;
     box-shadow: 0 0.3rem 0.6rem rgba($color-black, 0.3);
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  .depoimentos {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 4%;
+    }
   }
 }
