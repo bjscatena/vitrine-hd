@@ -21,11 +21,15 @@
     url(../images/woman_happy.jpg);
   background-size: cover;
 
-  transform: skewY(-7deg);
+  // transform: skewY(-7deg);
 
-  & > * {
-    transform: skewY(7deg);
-  }
+  // & > * {
+  //   transform: skewY(7deg);
+  // }
+}
+
+.section-tecnologias {
+  padding: 10rem 1.3rem;
 }
 
 .section-depoimentos {
